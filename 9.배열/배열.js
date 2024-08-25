@@ -159,3 +159,83 @@ const arr10 = [1, 2];
 arr10.shift();
 console.log(arr10); // [2]
 
+console.log(`=== Array.prototype.concat ===`);
+// # Array.prototype.concat
+//? concat 메서드는 인수로 전달된 값들을 원본 배열의 마지막요소로 추가한 새로운 배열을 반환한다. 인수로 전달한 값이 배열인 경우 배열을 해체하여 새로운 배열의 요소로 추가한다. 원본 배열은 변경되지 않는다.
+
+const arr11 = [1, 2];
+const arr12 = [3, 4];
+
+const arr13 = arr11.concat(arr12);
+console.log(arr13); //[1, 2, 3, 4]
+
+const arr14 = arr13.concat(3);
+console.log(arr14); //[1, 2, 3, 4, 3]
+
+const arr15 = arr11.concat(arr12, 5);
+console.log(arr15); //[1, 2, 3, 4, 5]
+
+console.log(`=== Array,prototype.splice ===`);
+//# Array.prototype.splice
+//? 원본 배열의 중간에 요소를 추가하거나 중간에 있는 요소를 제거하는 경우 splice 메서드를 사용한다. splice 메서드는 3개의 매개변수가 있으며 원본 배열을 직접 변경한다.
+
+const arr16 = [1, 2, 3, 4];
+
+//원본 배열의 인덱스 1부터 2개의 요소를 제거하고 그 자리에 새로운 요소 20, 30을 삽입한다.
+const arr17 = arr16.splice(1, 2, 20, 30);
+
+console.log(arr16); // [1, 20, 30, 4]
+console.log(arr17); // [2, 3]
+
+console.log(`=== Array.prototype.slice ===`);
+//# Array.prototype.slice
+//? slice 메서드는 인수로 전달된 범위의 요소들을 복사하여 배열로 변환한다. 원본 배열은 변경되지 않는다.
+
+const arr18 = [1, 2, 3];
+
+//인덱스 0부터 1(미포함)까지 복사
+const arr19 = arr18.slice(0,1);
+console.log(arr19); //[1]
+
+//인덱스 1부터 2(미포함)까지 복사
+const arr20 = arr18.slice(1, 2);
+console.log(arr20); //[2]
+
+//인덱스 1부터 이후의 모든 요소 복사
+const arr21 = arr18.slice(1);
+console.log(arr21); //[2, 3]
+
+//배열의 끝에서부터 요소를 한 개 복사하여 반환한다.
+const arr22 = arr18.slice(-1);
+console.log(arr22); //[3]
+
+//배열의 끝에서부터 요소를 두 개 복사하여 반환한다.
+const arr23 = arr18.slice(-2);
+console.log(arr23); //[2, 3]
+
+//인수를 모두 생략하면 원본 배열의 복사본을 생성하여 반환한다.
+const copy = arr18.slice();
+console.log(copy); //[1, 2, 3]
+
+console.log('=== Array.prototype.join ===');
+//# Array.prototype.join
+//? join 메서드는 원본 배열의 모든 요소를 문자열로 변환한 후, 인수로 전달받은 문자열, 즉 구분자로 연결한 문자열을 반환한다.
+const arr24 = [1, 2, 3, 4];
+console.log(arr24.join()); //1, 2, 3, 4
+
+console.log(arr24.join('')); //1234
+
+console.log(arr24.join(':')); //1:2:3:4
+
+console.log('=== Array.prototype.reverse ===');
+//# Array.prototype.reverse
+//? reverse 메서드는 원본 배열의 순서를 반대로 뒺집는다. 이때 원본 배열이 변경된다. 변환값은 변경된 배열이다.
+
+console.log('=== Array.prototype.fill ===');
+//# Array.prototype.fill
+//? ES6에서 도입된 fill 메서드는 인수로 전달 받은 값을 배열의 처음부터 끝까지 요소로 채운다. 이때 원본 배열이 변경된다.
+
+const arr25 = [1, 2, 3];
+
+arr25.fill(0);
+console.log(arr25); // [0, 0, 0]
