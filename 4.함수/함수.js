@@ -71,7 +71,7 @@ var repeat = function(n) {
 }
 
 console.log(repeat(5)); // 0 1 2 3 4
-// ? 이때 repeat 함수는 console.log(i)에 강하게 의존하고 있어 다른 일ㅇ을 할 수 없다. 따라서 repeat 함수의 반복문 내부에서 다른 일을 하고 싶다면 함수를 새롭게 정의해야 한다.
+// ? 이때 repeat 함수는 console.log(i)에 강하게 의존하고 있어 다른 일을 할 수 없다. 따라서 repeat 함수의 반복문 내부에서 다른 일을 하고 싶다면 함수를 새롭게 정의해야 한다.
 
 var repeat1 = function(n) {
   for (var i = 0; i < n; i++) {
