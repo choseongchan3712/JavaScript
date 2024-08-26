@@ -120,3 +120,51 @@ console.log(result); //[1, 2, 3, 5, 4]
 const values4 = [1, 2, 1, 3, 5, 4, 5, 3, 4, 4];
 const result1 = values4.filter((val, i, _values) => _values.indexOf(val) === i);
 console.log(result); //[1, 2, 3, 5, 4]
+
+console.log("=== Array.prototype.some ===");
+//# Array.prototype.some
+//? some 메서드는 자신을 호출한 배열의 요소를 순회하면서 인수로 전달된 콜백 함수를 호출한다. 이때 some 메서드는 콜백 함수의 반환값이 단 한 번이라도 참이면 true, 모두 거짓이면 false를 반환한다.
+//& forEach, map, filter 메서드와 마찬가지도 some 메서드의 콜백 함수는 some 메서드를 호출한 요소값과 인덱스, some 메서드를 호출한 배열 자체, 즉 this를 순차적으로 전달 받을 수 있다.
+
+//예
+console.log([5, 20, 15].some(item => item > 10)); //true
+console.log([5, 20, 15].some(item => item < 0)); //false
+
+console.log("=== Array.prototype.every ===");
+//# Array.prototype.every
+//? every 메서드는 자신을 호출한 배열의 요소를 순회하면서 인수로 전달된 콜백 함수를 호출한다. 이때 every 메서드는 콜백 함수의 반환값이 모두 참이면 true, 단 한 번이라도 거짓이면 false를 반환한다.
+console.log([5, 20, 15].every(item => item > 4)); //true
+console.log([5, 20, 15].every(item => item > 6)); //false
+
+console.log("=== Array.prototype.find ===");
+//# Array.prototype.find
+//? find 메서드는 자신을 호출한 배열의 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫 번째 요소를 반환한다. 콜백 함수의 반환값이 true인 요소가 존재하지 않는다면 undefined를 반환한다.
+// 예
+const users = [
+  {id: 1, name: 'Lee'},
+  {id: 2, name: 'Kim'},
+  {id: 2, name: 'Choi'},
+  {id: 3, name: 'Park'}
+];
+
+console.log(users.find(user => user.id === 2)); //{id: 2, name: 'Kim'}
+
+console.log("=== Array.prototype.findIndex ===");
+//# Array.prototype.findIndex
+//? findIndex 메서드는 자신을 호출한 배열의 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫 번째 요소의 인덱스를 반환한다. 콜백 함수의 반환값이 true인 요소가 존재하지 않는다면 -1을 반환한다.
+//예
+
+const users1 = [
+  {id: 1, name: 'Lee'},
+  {id: 2, name: 'Kim'},
+  {id: 2, name: 'Choi'},
+  {id: 3, name: 'Park'}
+];
+
+console.log(users1.findIndex(user => user.id === 2)); //1
+console.log(users1.findIndex(user => user.name === 'Park')); //3
+
+console.log("=== Array.prototype.flatMap ===");
+//# Array.prototype.flatMap
+//? flatMap 메서드는 map 메서드를 통해 생성된 새로운 배열을 평탄화 한다.
+
