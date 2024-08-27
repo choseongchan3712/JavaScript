@@ -39,6 +39,21 @@ console.log('=== Number.MIN_SAFE_INTEGER ===');
 //예
 console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 
+//! Number.POSITIVE_INFINITY
+console.log('=== Number.POSITIVE_INFINITY ===');
+//? Number.POSITIVE_INFINITY는 양의 무한대를 나타내는 숫자값 Infinity와 같다.
+
+//예
+console.log(Number.POSITIVE_INFINITY); // Infinity
+
+//! Number.NEGATIVE_INFINITY
+console.log('=== Number.NEGATIVE_INFINITY ===');
+//? Number.NEGATIVE_INFINITY는 음의 무한대를 나타내는 숫자값 -Infinity와 같다
+
+// 예
+console.log(Number.NEGATIVE_INFINITY); // -Infinity
+
+
 
 
 
