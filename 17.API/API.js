@@ -4,3 +4,4 @@ fetch("https://goweather.herokuapp.com/weather/Gangneung")
     document.querySelector('#temperature').innerHTML =
     data['temperature']
   });
+
